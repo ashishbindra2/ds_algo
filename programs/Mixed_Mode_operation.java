@@ -18,3 +18,5 @@ public class Mixed_Mode_operation {
 	}
 
 }
+//output:- 
+//  Ashish48255
