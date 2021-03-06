@@ -1,4 +1,4 @@
-package tree;
+package linkedlist;
 
 public class Client {
 
