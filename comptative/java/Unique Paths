@@ -1,0 +1,11 @@
+class Solution {
+    public int uniquePaths(int m, int n) {
+        m=m+n-2;
+        n=n-1;
+      double ans=1;
+        for(int i=1;i<=Math.min(m-n,n);i++){
+            ans = (ans *(m-i+1))/i;
+        }
+        return((int)ans);
+    }
+}
