@@ -3,9 +3,20 @@ public class Setith {
    public static void main(String args[]) {
 	   int n=13;//1101
 	int i=1;
+//	check the bit
 		   if((n&(1<<i))!=0)
-			     System.out.print("set");
+			     System.out.print("set\n");
 		   else
-			   System.out.print("no");
+			   System.out.print((n&(1<<i))+"no\n");
+//		   set the bit
+		   if((n|(1<<i))!=0)
+			     System.out.print((n|(1<<i) )+"set\n");
+		   else
+			   System.out.print((n|(1<<i) )+"\n");
+		   //unset the bit
+		   if((n^(1<<i))!=i)
+			     System.out.print((n^(1<<i) )+"unset\n");
+		   else
+			   System.out.print((n^(1<<i) )+"\n");
    }
 }
