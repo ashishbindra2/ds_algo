@@ -59,3 +59,26 @@ for (Integer i : m.keySet()) {
 }
 }
 }
+//fastest
+ import java.io.*;
+import java.util.*;
+
+class TestClass {
+    
+    public static void main(String args[] ) throws Exception {
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+StringBuilder sb = new StringBuilder();
+String name = br.readLine();
+int n = Integer.parseInt(name);
+String[] arr = br.readLine().split(" ");         
+ int maxn = (int)1e6+14;
+int[] mark=new int[maxn];
+	for(int i = 0; i < n; i++){
+		int x=Integer.parseInt(arr[i]);
+		mark[x] ^= 1;
+	}
+	for(int i = 1; i < maxn; i++)
+		if(mark[i]==1)
+			System.out.print(i+" ");
+}
+}
