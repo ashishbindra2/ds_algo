@@ -1,6 +1,16 @@
 import java.util.*;
 
 public class Frequency {
+	  public static void frq(String s) {
+    	HashMap<Character, Integer> map = new HashMap<>();// Creating HashMap
+		char c;
+		for (int i = 0; i < s.length(); i++) {
+			c = s.charAt(i);
+		      map.put(c,map.getOrDefault(c, 0) + 1);
+		}
+		System.out.println(map);
+
+    }
     public static void mapp(String s) {
     	HashMap<Character, Integer> map = new HashMap<>();// Creating HashMap
 		char c;
