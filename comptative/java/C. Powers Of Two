@@ -49,6 +49,6 @@ public class PowersOfTwo {
 	
 	for( Map.Entry<Integer,Integer> entry :ans.entrySet())
 		for(int i = 0; i < entry.getValue(); i++)
-			System.out.print( entry.getKey());
+			System.out.print(entry.getKey()+" ");
 	}
 }
