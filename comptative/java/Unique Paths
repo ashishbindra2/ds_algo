@@ -9,3 +9,17 @@ class Solution {
         return((int)ans);
     }
 }
+
+
+///
+class Solution {
+public int uniquePaths(int m, int n) {
+m=m-1;
+n=n-1;
+double ans=1;
+for(int i=1;i<=Math.min(m,n);i++){
+ans = (ans *(m+n-i+1))/i;
+}
+return((int)ans);
+}
+}
