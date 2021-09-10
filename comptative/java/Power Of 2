@@ -16,3 +16,7 @@ class TestClass {
         
     }
 }
+
+// easy but slow
+int num = (n & (~(n-1))); 
+cout<<log2(num);
