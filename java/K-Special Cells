@@ -1,0 +1,78 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.*;
+class TestClass {
+    
+	static int mod=1000000007;
+	static long fact[] =new long[1000007];//1e6+7
+    static  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+     static  StringTokenizer st ;;
+       
+   static String next()
+        {
+            while (st == null || !st.hasMoreElements()) {
+                try {
+                    st = new StringTokenizer(br.readLine());
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return st.nextToken();
+        }
+ static void preCompute(){
+		  fact[0] =1;
+		for(int i=1;i<=1000000;i++){
+			fact[i]=(fact[i-1]*i)%mod;
+		}
+	}
+    public	static long ncr(int n,int r){
+		long ans=1;
+		ans = (ans * fact[n])%mod;
+        long den = ((fact[r]*fact[n-r])%mod);
+		ans= (ans*modePow(den,mod-2,mod))%mod;
+		return ans;
+	}
+    static long modePow(long base, long n,long mode){
+         long ans=1;
+         while(n>0){
+             if(n%2==0){
+                 base = (base*base)%mode;
+                 n=n/2;
+             }else{
+                 ans = (ans*base)%mode;
+                 n=n-1;
+             }
+         }
+         return ans;
+     }
+    public static void main(String args[] ) throws Exception {
+        preCompute();
+       int T = Integer.parseInt(next());
+       while(T-->0){
+           int N = Integer.parseInt(next());
+           int M= Integer.parseInt(next());
+           long P;
+           int K = Integer.parseInt(next());
+           int X ;
+           int Y;
+           long sum=0;
+           for(int i=1;i<=K;i++){
+               long ans=1;
+               X = Integer.parseInt(next());
+               Y = Integer.parseInt(next());
+               P = Long.parseLong(next());
+               ans=(ans*(ncr(X+Y-2,X-1)))%mod;
+               ans=(ans*(ncr(N-X+M-Y,M-Y)))%mod;
+               ans=(ans*P)%mod;
+               sum=(sum+ans)%mod;
+                 //  System.out.print(ans+"a");
+           }
+
+     System.out.print(sum);
+ 
+       }
+       
+    }
+}

@@ -1,0 +1,12 @@
+int solution(int number) 
+{
+  int sum =0;
+  number--;
+  while(number>1){
+    if(number%3==0)
+         sum+=number;
+    else if(number%5==0)
+       sum+=number;
+    number--;
+  }
+  return sum;

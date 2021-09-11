@@ -1,0 +1,14 @@
+int findDigit(int num, int nth,int c=1){
+  if(nth<1)
+    return -1;
+  if(num<0)
+    num = num*-1;
+  
+  if(num==0)
+    return 0;
+  int r=num%10;
+ if(nth==1)
+   return r;
+
+  return  findDigit(num/10,nth-1,c++);
+}

@@ -1,0 +1,16 @@
+#include <math.h> 
+
+unsigned int squaresNeeded(long long n){
+ 
+  if(n==0)
+    return 0;
+  int nr=1;
+  if(!n)
+    return 0;
+  else{
+  while(pow(2,nr)<=n)
+  nr++;
+  return nr;
+  }
+ 
+}

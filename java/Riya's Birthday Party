@@ -1,0 +1,18 @@
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.*;
+
+class TestClass {
+  static int mod =1000000007;
+    public static void main(String args[] ) throws Exception {
+      //  n*(2*n-1)
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int t= Integer.parseInt(br.readLine());
+        while(t-->0){
+long n= Long.parseLong(br.readLine());
+            System.out.print( ( (n%mod)*( (2*n%mod)%mod -1))  %mod  +"\n");
+        }           
+
+    }
+}
