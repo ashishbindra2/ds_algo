@@ -1,0 +1,32 @@
+class Geeks{
+    static void countSpecials(int a[], int n, int k){
+        
+        int f = (int)Math.floor(n/k);
+        int count = 0;
+        
+        //creating a freqeuncy 
+        //storing array
+        int hash[] = new int[1001];
+        
+        Arrays.fill(hash, 0);
+        
+        
+        //incrementing the frequency
+        //of element encountered
+        for(int i = 0;i             hash[a[i]]++;
+            
+        }
+        
+        //incrementing count if frequency is f
+        for(int i=0;i         {
+            if(hash[a[i]] == f){
+                count++;
+                hash[a[i]]=-1;
+            }
+        }
+        
+        //printing the count
+        System.out.println(count);
+        
+    }
+}
