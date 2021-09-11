@@ -1,0 +1,63 @@
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+//import for Scanner and other utility classes
+import java.util.*;
+
+class Main {
+    static int siz = 10000;
+    static boolean sev[] = new boolean[siz+1];
+    public static void seive(){
+        for(int i=2;i<=siz;i++){
+            if(sev[i]==false){
+                for(int p=i*i;p<=siz;p+=i){
+                    sev[p]=true;
+                }
+            }
+        }
+    }
+    public static int l1(int n){
+        int lp=0;
+     for(int l=n;l>=2;l--){
+           if(sev[l]==false){
+               lp=l;
+              break;
+     }
+     }
+    return lp;
+    }
+    public static int r1(int n){
+        int rp=0;
+     for(int r=n;r<=siz;r++){
+           if(sev[r]==false){
+               rp=r;
+              break;
+           }
+     }
+    return rp;
+    }
+    public static void main(String args[] ) throws Exception {
+        seive();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st  = new StringTokenizer(br.readLine());
+        int t = Integer.parseInt(st.nextToken());
+        while(t-->0){
+        int n = Integer.parseInt(br.readLine());
+          if( n == 0||n==1){
+ System.out.print(2+"\n");
+     continue;
+         } if(sev[n]==false){
+             System.out.print(n+"\n");
+             continue;
+         }
+       
+          int l =l1(n);
+          int r = r1(n);
+          if(n-l<=r-n)
+               System.out.print(l+"\n");
+        else
+          System.out.print(r+"\n");
+        }
+    }
+}
