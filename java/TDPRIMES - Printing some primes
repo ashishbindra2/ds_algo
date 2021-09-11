@@ -1,0 +1,36 @@
+
+public class TdPrime {
+
+	public static int size = 100000000;
+	public static boolean se[] = new boolean[100000001];
+        public static int mo=1000000007;
+	
+	public static void main(String[] args) throws java.lang.Exception
+	{
+		StringBuilder sb = new StringBuilder();
+		
+		for (int i = 2; (i * i)%mo <= size; i++)
+		{
+			if (se[i] == false) {
+				for (int j =(i * i)%mo; j <= size; j += i)
+					se[j] = true;
+			}
+		}
+		
+		int c = 0;	
+		for (int j = 2; j <= size; j++) {
+		
+			if (se[j] == false)
+			{  
+				c++;
+				if (c % 100 == 1) 
+				{
+				      sb.append(j);
+		                      sb.append('\n');
+				}
+			}
+		}
+		System.out.print(sb);
+	}
+
+}

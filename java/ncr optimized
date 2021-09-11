@@ -1,0 +1,71 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main
+{
+	 static  BufferedReader br;
+     static  StringTokenizer st;
+	static int mod=100000007;
+	static long fact[] =new long[100003];
+	Main(){
+        	  br = new BufferedReader(
+                new InputStreamReader(System.in));
+                }
+      static String next()
+        {
+            while (st == null || !st.hasMoreElements()) {
+                try {
+                    st = new StringTokenizer(br.readLine());
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return st.nextToken();
+        }
+	static void preCompute(){
+		  fact[0] =1;
+		for(int i=1;i<=100000;i++){
+			fact[i]=(fact[i-1]*i)%mod;
+		}
+	}
+    public	static long ncr(int n,int r){
+		long ans=1;
+		ans = (ans * fact[n])%mod;
+        long den = ((fact[r]*fact[n-r])%mod);
+		ans= (ans*modePow(den,mod-2,mod))%mod;
+		return ans;
+	}
+    static long modePow(long base, long n,long mode){
+         long ans=1;
+         while(n>0){
+             if(n%2==0){
+                 base = (base*base)%mode;
+                 n=n/2;
+             }else{
+                 ans = (ans*base)%mode;
+                 n=n-1;
+             }
+         }
+         return ans;
+     }
+static	void derivedCode(){
+		preCompute();
+		int t;
+      	 	new Main();
+      	 	t  = Integer.parseInt(next());
+      	 	while(t-->0){
+      	 		int n,r;
+      	 		n=Integer.parseInt(next());
+      	 		r=Integer.parseInt(next());
+      	 		System.out.print(ncr(n,r)+"\n");
+      	 	}
+		
+	}
+
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		derivedCode();
+	}
+}
