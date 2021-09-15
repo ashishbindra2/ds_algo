@@ -2,8 +2,13 @@
 ***
 - ROWNUM   --> we can't use rownum with (*)
 - <>       --> != ( not equals to)
-- GROUP BY --> you cant use where clouse when ever you use group by clouse
+- GROUP BY --> you can't use WHERE after GROUP BY clause you can user before that,GROUP BY Clause always follows the WHERE Clause
+- HAVING   --> it always come after the GROUP BY clause,Where Clause applied first and then Having Clause.
+- WHERE    -->  WHERE and HAVING can be used in a single query.
 
+---
+- WHERE Clause restricts records before GROUP BY Clause, whereas HAVING Clause restricts groups after GROUP BY Clause are performed.
+- WHERE Clause can be utilized with SELECT, UPDATE, DELETE, and INSERT, whereas HAVING can be utilized only with SELECT statement.
 ---
 ## Union Clouse 
 > Union Clouse used to combine the result-set of two or more selective queries.
