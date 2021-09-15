@@ -33,15 +33,17 @@ Q7) Pattern matching (Latter start with M eg)
  8) SELECT HIREDATE,ENAME FROM emp WHERE HIREDATE LIKE '%DEC%'; //Hiring in December
  9) SELECT ENAME FROM emp WHERE ENAME LIKE 'A&S'; //Start and end with A&S
  
-
-
-
-
-
-
-Q8)
-Q9)
-Q10)
+Q8)First 4 row 
+ 1) SELECT * FROM emp WHERE ROWNUM<=4 ;
+Q9)Display nth row in SQL
+ 1) SELECT * FROM emp WHERE ROWNUM<=4 MINUS  SELECT * FROM emp WHERE ROWNUM<=3;//Excectly 4th record
+ 2) SELECT * FROM (SELECT ROWNUM r,ENAME,SAl FROM emp) WHERE r=4; //Excectly 4th record
+ 3) SELECT * FROM (SELECT ROWNUM r,emp.* FROM emp) WHERE r=4;//entirer row of 4th no
+ 4) SELECT * FROM (SELECT ROWNUM r,emp.* FROM emp) WHERE r IN(2,5,7);//Display 2,5,7 record
+ 
+Q10)union vs uninonall
+ 1) SELECT ENAME FROM emp1 UNION SELECT ENAME FROM emp2;//union// Elemenate dublicate values from the set
+ 2) SELECT ENAME FROM emp1 UNION ALL SELECT ENAME FROM emp2; //allow dublicate data
 Q11)
 Q12)
 Q14)
