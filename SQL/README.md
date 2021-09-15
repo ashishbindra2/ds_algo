@@ -17,3 +17,7 @@
 ##UnionAll Clouse 
 > **UNION** remove dublicate values while comparing where **UNION ALL** allows dublicates values while combining.
 ---
+##INNER-JOIN
+- Based on the equality condition data retreved from multiple tables.
+- We must have a common column in both the tables with the same data type.
+- Right table row is joined with left table row if there is a matching for the left row in Right table.
