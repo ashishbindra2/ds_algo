@@ -25,6 +25,18 @@ Q6) Display Duplicate of a Column
 Q7) Pattern matching (Latter start with M eg)
  1) SELECT ENAME FROM emp WHERE ENAME LIKE 'S%'; //starting letter
  2) SELECT ENAME FROM emp WHERE ENAME LIKE '%N'; //Ending letter
+ 3) SELECT ENAME FROM emp WHERE ENAME LIKE '%M%';// Contain letter M in names
+ 4) SELECT ENAME FROM emp WHERE ENAME NOT LIKE '%M%'; // not contains leeter m
+ 5) SELECT ENAME FROM emp WHERE ENAME LIKE '____'; // contain 4 character
+ 6) SELECT ENAME FROM emp WHERE ENAME LIKE '_L%'; // 2nd letter contain L
+ 7) SELECT ENAME FROM emp WHERE ENAME LIKE '___M%'; // on 4th postion letter M
+ 8) SELECT HIREDATE,ENAME FROM emp WHERE HIREDATE LIKE '%DEC%'; //Hiring in December
+ 9) SELECT ENAME FROM emp WHERE ENAME LIKE 'A&S'; //Start and end with A&S
+ 
+
+
+
+
 
 
 Q8)
