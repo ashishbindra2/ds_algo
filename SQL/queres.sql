@@ -50,7 +50,12 @@ Q11) Inner Join
   1) SELECT ENAME,SAL,DEPT.DEPTNO,LOC FROM EMP,DEPT WHERE EMP.DEPTNO = DEPT.DEPTNO;
   2) SELECT ENAME,SAL,d.DEPTNO,LOC FROM EMP e,DEPT d WHERE e.DEPTNO = d.DEPTNO;
   3) SELECT ENAME,SAL,d.DEPTNO,LOC FROM EMP e,DEPT d WHERE e.DEPTNO = d.DEPTNO and LOC='NEW YORK';
-Q12)
+  4) SELECT DNAME,SUM(SAL) FROM EMP e,DEPT d WHERE e.DEPTNO = d.DEPTNO GROUP BY DNAME;
+  
+Q12) SELF JOIN
+  1) SELECT e1.ENAME  "employes",e2.ENAME  "managers",e1.SAL FROM emp e1, emp e2 WHERE e2.EMPNO=e1.MGR; .//find manager of emplyee
+  2) SELECT e1.ENAME  "employes",e2.ENAME  "managers",e1.SAL FROM emp e1, emp e2 WHERE e2.EMPNO=e1.MGR AND e1.SAl>e2.SAL;//emp salary grat than manager
+  3) SELECT e1.ENAME  "employes",e2.ENAME "managers" ,e1.SAL,e1.HIREDATE FROM emp e1, emp e2 WHERE e2.EMPNO=e1.MGR AND e1.HIREDATE<e2.HIREDATE; //join befor managers 
 Q14)
 Q15)
 Q16)
