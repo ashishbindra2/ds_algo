@@ -14,7 +14,7 @@
  - similar or compartible data types
  - same logical order
 ---
-##UnionAll Clouse 
+## Union All Clouse 
 > **UNION** remove dublicate values while comparing where **UNION ALL** allows dublicates values while combining.
 ---
 ## INNER-JOIN
