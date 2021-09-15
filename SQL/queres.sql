@@ -9,7 +9,7 @@ Q2) Department wise highest Salary or OrderId wise highest Salary.
  
 Q3) Counts No of EMployes ineach Department or counts no of Quantity in Each OrderID
  1) SELECT COUNT(*),OrderID FROM [OrderDetails] GROUP BY OrderID
- 2) SELECT COUNT(*),deptNo FROM [emp] GROUP BY deptNo
+ 2) SELECT COUNT(*),deptNo FROM [emp] GROUP BY deptNo //can be for doublicate vales
  
 Q4) Display Alternate Records( 1,3,5 or 2,4,6)?
  1) SELECT * FROM (SELECT ROWNUM rn,EMPNO,SAL,ENAME,DEPTNO FROM emp ORDER BY rn) WHERE MOD(rn,2)<>0;
@@ -19,8 +19,14 @@ Q4) Display Alternate Records( 1,3,5 or 2,4,6)?
 Q5) Add numberas add view sal in desending order
  1) SELECT ROWNUM rn,EMPNO,SAL,ENAME,DEPTNO FROM emp ORDER BY SAL DESC;
  
-Q6) 
-Q7)
+Q6) Display Duplicate of a Column
+ 1) SELECT DEPTNO,COUNT(*) FROM emp GROUP BY DEPTNO HAVING COUNT(*)>1;
+
+Q7) Pattern matching (Latter start with M eg)
+ 1) SELECT ENAME FROM emp WHERE ENAME LIKE 'S%'; //starting letter
+ 2) SELECT ENAME FROM emp WHERE ENAME LIKE '%N'; //Ending letter
+
+
 Q8)
 Q9)
 Q10)
