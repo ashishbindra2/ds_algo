@@ -1,2 +1,2 @@
 //
-- ROWNUM => we can't use rownum with (*_ 
+- ROWNUM => we can't use rownum with (*)
