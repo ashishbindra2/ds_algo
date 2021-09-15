@@ -37,3 +37,15 @@
 - Matching value rows from right side table.
 - null values in place of Non matching rows in other table.
 
+## RIGHT JOIN
+- All rows from right side table are displayed.
+- Matching value rows from left side table.
+- null values in place of Non matching row in othere table.
+
+## FULL JOIN 
+- A FULL JOIN is view as a result of union operation of an INNER JOIN, LEFT JOIN and RIGHT JOIN
+- It reutrns all matched records i.e where the join condition is satisfied on both tables.
+- it returns all rows from reftside table(unmatched right side row)
+- It return all rows from the left side table(unmatched left side row)
+- This join return null values in place of nonmatching tuples in another table.
+
