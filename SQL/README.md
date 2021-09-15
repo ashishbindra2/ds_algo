@@ -26,3 +26,14 @@
 - Based on the equality condition data retreved from multiple tables.
 - We must have a common column in both the tables with the same data type.
 - Right table row is joined with left table row if there is a matching for the left row in Right table.
+
+## SELF JOIN
+- Joining a Table with itself is called self join.
+- Comparing values of a values with the values of same column itself or different coluns values of the same table.
+- Display employee details who are geeting more salary than their manager salary. here given one table employee,so values are commare with itself we can use copy of values.
+
+## LEFT JOIN
+- All rows from left side table.
+- Matching value rows from right side table.
+- null values in place of Non matching rows in other table.
+
