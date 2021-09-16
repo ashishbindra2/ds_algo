@@ -49,3 +49,9 @@
 - It return all rows from the left side table(unmatched left side row)
 - This join return null values in place of nonmatching tuples in another table.
 
+## 1NF
+1. Each column of the table should contain atomic values.(a column should contain multiple values)
+2. Intermixing of different values in column.
+3. Uniques column names for easy understand and access ablity
+4. ordering of data doesnot matter
+5.  
