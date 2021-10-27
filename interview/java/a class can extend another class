@@ -1,0 +1,61 @@
+a class can extend another class
+
+class A extends B
+{
+}
+
+A class can implements any number of interfaces.
+
+class A implements B,C,D
+{
+}
+
+A class can extend another class and can implement any number of interfaces simultaneously.
+
+interface Interf
+{
+}
+class A
+{
+}
+class B implements Interf extends A
+{
+}
+
+
+
+interface Interf
+{
+}
+class A
+{
+}
+class B extends A implements Interf 
+{
+}
+
+
+interface Interf
+{
+ public void m1();
+ public void m2();
+}
+class A
+{
+ public void m1(){}
+}
+If implements first and then extends:
+----------------------------------------------------------
+class B implements Interf extends A
+{
+  public void m1(){}
+  public void m2(){}
+}
+If extends first and then implements:
+-----------------------------------------------------------
+class B extends A implements Interf
+{
+   public void m2(){}
+}
+extends===What we are getting from the parent
+implements ===What we have to give (what methods we have to implement)
