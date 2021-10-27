@@ -1,0 +1,41 @@
+final vs abstract:
+---------------------------
+1. abstract methods should be overridden in the child classes to provide implementation. But final methods cannot be overridden.
+abstract and final combination is illegal for methods.
+
+Test.java:3: error: illegal combination of modifiers: abstract and final
+        public abstract final void m1();
+
+
+2. For abstract class, we should create child classes to provide implementation. But for final classes we cannot create child classes.
+Hence abstract and final combination is illegal for classes also.
+
+Test.java:1: error: illegal combination of modifiers: abstract and final
+abstract final class Test
+
+
+3. Abstract class can contain final methods.
+
+4. Final class cannot contain abstract method.
+Test.java:1: error: Test is not abstract and does not override abstract method m2() in Test
+final class Testfinal vs abstract:
+---------------------------
+1. abstract methods should be overridden in the child classes to provide implementation. But final methods cannot be overridden.
+abstract and final combination is illegal for methods.
+
+Test.java:3: error: illegal combination of modifiers: abstract and final
+        public abstract final void m1();
+
+
+2. For abstract class, we should create child classes to provide implementation. But for final classes we cannot create child classes.
+Hence abstract and final combination is illegal for classes also.
+
+Test.java:1: error: illegal combination of modifiers: abstract and final
+abstract final class Test
+
+
+3. Abstract class can contain final methods.
+
+4. Final class cannot contain abstract method.
+Test.java:1: error: Test is not abstract and does not override abstract method m2() in Test
+final class Test

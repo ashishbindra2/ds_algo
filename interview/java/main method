@@ -1,0 +1,37 @@
+public static void main(String[] args){}
+
+1. order of modifiers is not important in java
+
+static public void main(String[] args){}
+
+2. instead of args we can take any valid java identifier
+static public void main(String[] durga){}
+
+3. We can declare String[] in any acceptable form
+
+  main(String[] durga)
+  main(String  []durga)
+  main(String durga[])
+4. var-args in java 1.5 version
+   
+   m1(int x){}
+   m1(10)
+
+   m1(int... x){}
+   m1()
+   m1(10)
+   m1(10,20,30)
+
+   main(String[] durga)=== main(String... durga)
+5. main method can be declared with final
+6. main method can be declared with synchronized.
+7. main method can be declared with strictfp 
+      IEEE 754 
+
+public class Test 
+{
+ static synchronized strictfp final public void main(String... durga)
+ {
+  System.out.println("Hello don't get irritation");
+ }
+}

@@ -1,0 +1,38 @@
+strictfp modifier
+
+introduced in java 1.2 version
+
+strictfp === strict floating point
+
+applicable for classes and methods but not for variables.
+
+The result of floating point arithmetic is varied from platform to platform
+
+windows-- 3.3333333333333335
+linux --- 3.3333333
+MAC ----  3.3333333333334
+
+If we want platform independent results for floating point arithmetic
+strictfp modifier.
+
+strictfp method:
+---------------
+If a method declared as strictfp then all floating point calculations in that method has to follow IEEE 754 standard, so that we will get platform independent results.
+
+windows-- 3.33333
+linux --- 3.33333
+MAC ----  3.33333
+
+strictfp class:
+---------------
+If a class declared as strictfp all concrete methods in that class has to follow IEEE 754 standard, so that we will get platform independent results for floating point arithmetic.
+
+
+abstract vs strictfp:
+--------------------
+1. abstract method should not contain implementation. strictfp method should compulsory contains implementation.
+
+abstract-strictfp is illegal for methods.
+like abstract-final 
+
+2. abstract-strictfp is legal for classes.
