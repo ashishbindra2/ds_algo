@@ -254,3 +254,30 @@ class Solution:
             k = k - 1
         return nums
 ```
+
+##  Left Rotate an Array by One
+https://www.naukri.com/code360/problems/left-rotate-an-array-by-one_5026278?leftPanelTabValue=SUBMISSION
+```py 
+    temp = arr[0]
+    n = len(arr)
+    for i in range(1,n):
+        arr[i-1] = arr[i]
+    
+    arr[n-1] = temp
+    return arr
+```
+    
+## Right Rotate Array by One
+https://www.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1
+```py
+class Solution:
+    def rotate(self, arr):
+        n = len(arr) - 1
+        temp = arr[n]
+        for i in range(n,0,-1):
+            arr[i] = arr[i-1]
+        
+        arr[0] = temp
+        return arr
+```
+
