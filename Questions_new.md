@@ -297,7 +297,19 @@ def rotateArray(arr: list, k: int) -> list:
         arr[i] = temp[i-(n-k)]
     return arr
 ```
-
+```py
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n = len(nums)
+        k = k % n
+        
+        nums[:k] = reversed(nums[:k])
+        nums[k:n] = reversed(nums[k:n])
+        nums[:] = reversed(nums)
+        return nums
+```
 ## 189. Rotate Array - Right rotate by  kth place
 https://leetcode.com/problems/rotate-array/description/
 ```py
