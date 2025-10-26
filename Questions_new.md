@@ -358,4 +358,28 @@ class Solution:
         return nums
 ```
         
+## 283. Move Zeroes
+https://leetcode.com/problems/move-zeroes/description/
+```py
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        temp = []
+        for i in nums:
+            if i!=0:
+                temp.append(i)
+        
+        n = len(temp)
+        for i in range(0,n):
+            nums[i] = temp[i]
+        
+        for i in range(n,len(nums)):
+            nums[i] = 0
+
+        return nums
+```
+
+
 
