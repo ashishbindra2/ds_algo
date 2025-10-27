@@ -51,3 +51,44 @@ def search(nums: [int], target: int):
 
 ```
 
+##  Compress the String
+https://www.naukri.com/code360/problems/compress-the-string_526?interviewProblemRedirection=true&company%5B%5D=Accenture&leftPanelTabValue=PROBLEM&count=25&search=&sort_entity=order&sort_order=ASC&customSource=studio_nav
+
+```py
+from sys import stdin,setrecursionlimit
+setrecursionlimit(10**7)
+
+
+def getCompressedString(input) :
+	# Write your code here.
+	pre = input[0]
+	c = 1
+	s = ''
+	for i in range(1,len(input)):
+		if input[i] is pre:
+			c+=1
+		else:
+			if c >1:
+				s= s + pre+str(c)
+			else:
+				s= s + pre
+
+			c = 1
+		pre = input[i]
+	
+	if c >1:
+			s= s + pre+str(c)
+	else:
+			s= s + pre
+
+	return s
+
+
+
+
+# Main.
+string = stdin.readline().strip();
+ans = getCompressedString(string)
+print(ans)
+```
+
