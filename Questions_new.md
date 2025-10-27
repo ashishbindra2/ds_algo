@@ -91,7 +91,7 @@ class Solution{
 }
 ```
 
-2. Valid Anagram (Easy)
+## 2. Valid Anagram (Easy)
    Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
 
 An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
@@ -161,7 +161,7 @@ class Solution:
 
         return sorted(s) == sorted(t)
 ```
-3. Two Sum (Easy)
+## 3. Two Sum (Easy)
 Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j.
 
 You may assume that every input has exactly one pair of indices i and j that satisfy the condition.
