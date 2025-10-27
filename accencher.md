@@ -1,5 +1,6 @@
- Sort 0 1
+## Sort 0 1
 https://www.naukri.com/code360/problems/sort-0-1_624379?leftPanelTabValue=PROBLEM&count=25&search=&company%5B%5D=Accenture&sort_entity=order&sort_order=ASC&customSource=studio_nav
+```py
 from sys import stdin
 
 def sortZeroesAndOne(arr, n) :
@@ -15,5 +16,38 @@ def sortZeroesAndOne(arr, n) :
             j-=1
         if arr[i] == 0:
             i+=1
+```
 
+## Binary Search
+https://www.naukri.com/code360/problems/binary-search_972?leftPanelTabValue=PROBLEM&count=25&search=&company%5B%5D=Accenture&company%5B%5D=Accenture&sort_entity=company_count&sort_order=DESC&customSource=studio_nav
+
+```py
+def search(nums: [int], target: int):
+    # write your code logic !!
+    low = 0
+    high = len(nums) - 1
+
+    mid = (low + high) // 2
+
+    while low <= high:
+        # print(mid,nums[mid])
+        if nums[mid] < target:
+            low = mid + 1
+        elif nums[mid] > target:
+            high = mid - 1
+        else:
+            return mid
+        mid =  (low + high) // 2
+    return -1
+```
+
+```py
+def search(nums: [int], target: int):
+    # write your code logic !!
+    
+    if target in nums:
+        return nums.index(target)
+    return -1
+
+```
 
