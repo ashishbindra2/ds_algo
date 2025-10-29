@@ -1,3 +1,4 @@
+- https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 ## 1. Contains Duplicate (Easy)
 https://neetcode.io/problems/duplicate-integer?list=neetcode150
 
