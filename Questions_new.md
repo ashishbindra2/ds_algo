@@ -402,3 +402,24 @@ class Solution:
         return nums
 ```
 
+##  Sort An Array of 0s, 1s and 2s
+https://www.naukri.com/code360/problems/sort-an-array-of-0s-1s-and-2s_892977?leftPanelTabValue=PROBLEM
+```py
+
+def sortArray(arr, n):
+	low = 0
+	mid = 0
+	heigh = n - 1 
+
+	while mid <= heigh:
+		if arr[mid] == 0:
+			arr[low],arr[mid] = arr[mid], arr[low]
+			mid+=1
+			low+=1
+		elif arr[mid] == 1:
+			mid+=1
+		else:
+			arr[heigh],arr[mid] = arr[mid], arr[heigh]
+
+			heigh-=1
+````
